@@ -6,13 +6,17 @@ body {
   background-color: #ebebeb;
 }
 
+h1 {
+  color: white;
+}
+
 a {
   color: white;
   text-decoration: none;
 }
 
 .header-container {
-  background-color: rgb(60, 60, 60);
+  background-color: #444;
   min-height: 100px;
   position: fixed;
   width: 100%;
@@ -47,14 +51,6 @@ header {
 .card div {
   flex-grow: 1;
 }
-.card:hover {
-  transform: scale(1.1);
-}
-
-.card {
-  border-radius: 4px;
-  transition: all 500ms;
-}
 
 .card p {
   font-size: 0.825rem;
@@ -71,36 +67,28 @@ header {
   height: auto;
 }
 
-.mybutton {
-  padding: 10px 25px;
-  border-width: 1px;
-  margin-left: 20px;
+.burger-menu {
+  color-interpolation-filters: sRGB;
 }
 
-.highlight {
-  font-weight: 700;
+nav a {
+  padding: 1rem;
 }
-
 .mob-wrapper {
   display: none;
 }
 
 /* Tablet View */
 @media (max-width: 768px) {
+  .basic-grid {
+    padding-top: 40px;
+  }
   .header-container {
     position: relative;
   }
 
-  .container {
-    padding-top: 40px;
-  }
-
   nav {
     display: none;
-  }
-
-  .logo {
-    padding: 40px 0;
   }
 
   .mybutton {
@@ -116,18 +104,21 @@ header {
     padding-top: 10px;
     display: none;
     position: absolute;
-    top: 0;
+    top: 115px;
     left: 0;
     width: 100vw;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 10;
+    height: 100vh;
   }
 
-  .navbutton {
+  .mob-nav a {
     display: block;
-    background-color: coral;
+    background-color: #444;
     padding: 15px 30px;
     text-align: center;
+  }
+
+  .mob-nav div {
+    height: 100%;
   }
 }
