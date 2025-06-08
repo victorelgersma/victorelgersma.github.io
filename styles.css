@@ -1,3 +1,28 @@
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  70% {
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 /* CSS reset to remove default margins */
 * {
   margin: 0;
@@ -27,6 +52,7 @@ body {
   gap: 1.5rem;
   align-items: center;
   max-width: 500px;
+  animation: fadeInUp 0.8s ease-out forwards;
 }
 
 h1 {
@@ -34,6 +60,7 @@ h1 {
   font-weight: bold;
   color: #1f2937;
   text-align: center;
+  animation: popIn 0.6s ease-out 0.3s both;
 }
 
 .links {
@@ -42,6 +69,19 @@ h1 {
   gap: 1.5rem;
   justify-content: center;
   flex-wrap: wrap;
+}
+
+/* Add staggered animations to links */
+.github {
+  animation: popIn 0.6s ease-out 0.6s both;
+}
+
+.linkedin {
+  animation: popIn 0.6s ease-out 0.8s both;
+}
+
+.youtube {
+  animation: popIn 0.6s ease-out 1s both;
 }
 
 .social-link {
@@ -57,7 +97,6 @@ h1 {
 
 .social-link:hover {
   transform: scale(1.05);
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
 .social-link svg {
